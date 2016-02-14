@@ -68,6 +68,17 @@ $( document ).ready(function() {
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
 		pagination: '.swiper-pagination',
+
+		onInit: function(){
+			if ($(".swiper-slide").length == 1) {
+				$(".page-description-content-articles").addClass("one").removeClass("two");
+			} else if ($(".swiper-slide").length == 2) {
+				$(".page-description-content-articles").addClass("two").removeClass("one");
+			} else if ($(".swiper-slide").length >= 3) {
+				$(".page-description-content-articles").removeClass("one two");
+			};
+		}
+		
 	});
 	
 });

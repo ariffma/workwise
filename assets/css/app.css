@@ -918,12 +918,9 @@ section.page-description-content {
 		background-repeat: no-repeat;
 	}
 
-	section.page-description-content .one article { width: 100%; }
-	section.page-description-content .two article { width: calc(100%/2); }
-	section.page-description-content .three article,
-	section.page-description-content .swiper-slide { 
-		width: calc(100%/3);
-	}
+	section.page-description-content .one .swiper-slide { width: 100%; }
+	section.page-description-content .two .swiper-slide { width: calc(100%/2); }
+	section.page-description-content .swiper-slide { width: calc((100%/3) + 1px); }
 
 		section.page-description-content article header {
 			width: 100%;
