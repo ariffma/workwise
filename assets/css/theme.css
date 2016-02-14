@@ -131,7 +131,7 @@ header.navigation {
 					nav ul li.active a:hover, nav ul li a:hover { color: #06b3bd; }
 
 		nav ul.icon { 
-			height: 15px;
+			height: auto;
 			margin-left: 5px;
 		}
 			nav ul.icon li a { padding: 33px 5px; }
