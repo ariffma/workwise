@@ -29,15 +29,14 @@ $( document ).ready(function() {
 	var galleryBig = new Swiper('.gallery-big', {
 		observer: true,
 		observeParents: true,
+		initialSlide: 0,
+
+		onSlideChangeStart: function(){
+			galleryThumbs.slideTo(galleryBig.activeIndex, 400);
+			galleryContent.slideTo(galleryBig.activeIndex, 400);
+		},
+
 		pagination: '.swiper-pagination',
-
-		onSlideNextEnd: function(){
-			galleryContent.slideNext(true, 400);
-		},
-
-		onSlidePrevEnd: function(){
-			galleryContent.slidePrev(true, 400);
-		},
 	});
 
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
@@ -45,12 +44,13 @@ $( document ).ready(function() {
 		slidesPerView: 'auto',
 		slideToClickedSlide: true,
 
+		onSlideChangeStart: function(){
+			galleryBig.slideTo(galleryThumbs.activeIndex, 400);
+		},
+
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
 	});
-
-	galleryBig.params.control = galleryThumbs;
-	galleryThumbs.params.control = galleryBig;
 
 
 	$(".learnmore").click(function() { $(".page-description-content").slideToggle(300); });
