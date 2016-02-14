@@ -53,13 +53,11 @@ $( document ).ready(function() {
 	galleryThumbs.params.control = galleryBig;
 
 
-	$(".learnmore").click(function() {
-		$(".page-description-content").slideToggle();
-	});
+	$(".learnmore").click(function() { $(".page-description-content").slideToggle(300); });
 
 
 	var descContentArt = new Swiper('.page-description-content-articles', {
-		initialSlide: 10,
+		initialSlide: 0,
 		slidesPerView: 'auto',
 		observer: true,
 		observeParents: true,
