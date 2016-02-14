@@ -72,6 +72,7 @@
                         <a href="index.html"> <img src="assets/images/logo.png"> </a>
                     </div>
 
+                    <!-- MOBILE: SHOW / DESKTOP: HIDE -->
                     <div class="col-xs-6 col-sm-6 visible-sm visible-xs hidden-md hidden-lg nav_resp">
                         <ul>
                             <li> <a href=""> <img src="assets/images/icon-search.png">      </a></li>
@@ -206,14 +207,15 @@
             <span class="diagonal"></span>
 
             <div class="container">
-                <div class="row title">
+                <div class="row title wow fadeInDown">
                     <div class="col-md-12 col-sm-12 col-xs-12"> 
                         <header>Trending</header> 
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 visible-sm visible-xs hidden-md hidden-lg trending_carousel">
+                    <!-- MOBILE: SHOW / DESKTOP: HIDE -->
+                    <div class="col-xs-12 col-sm-12 visible-sm visible-xs hidden-md hidden-lg trending_carousel wow fadeInDown" data-wow-delay="200ms">
                         <div class="swiper-container carousel-trending">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -273,7 +275,8 @@
                         
                     </div>
 
-                    <article class="one hidden-sm hidden-xs">
+                    <!-- MOBILE: HIDE / DESKTOP: SHOW -->
+                    <article class="one hidden-sm hidden-xs wow fadeInDown" data-wow-delay="200ms">
                         <div class="col-md-4 col-md-offset-1">
                             <header>
                                 <div class="vCenter">
@@ -296,7 +299,8 @@
                         </div>
                     </article>
 
-                    <div class="col-md-4 col-md-offset-1 hidden-sm hidden-xs">
+                    <!-- MOBILE: HIDE / DESKTOP: SHOW -->
+                    <div class="col-md-4 col-md-offset-1 hidden-sm hidden-xs wow fadeInDown" data-wow-delay="350ms">
                         <article class="two">
                             <figure>
                                 <a href="#single-post">
@@ -313,7 +317,8 @@
                         </article>
                     </div>
 
-                    <div class="col-md-3 hidden-sm hidden-xs">
+                    <!-- MOBILE: HIDE / DESKTOP: SHOW -->
+                    <div class="col-md-3 hidden-sm hidden-xs wow fadeInDown" data-wow-delay="500ms">
                         <article class="three">
                             <figure>
                                 <a href="#single-post">
@@ -330,7 +335,7 @@
                         </article>
                     </div>
 
-                    <div class="col-md-3 col-sm-12 col-xs-12 topborder_repsp">
+                    <div class="col-md-3 col-sm-12 col-xs-12 topborder_repsp wow fadeInDown" data-wow-delay="650ms">
                         <aside>
                             <ul>
                                 <li> <header class="title">What’s New</header> </li>
