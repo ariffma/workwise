@@ -1289,27 +1289,47 @@ section.page-hero { padding: 0 0 90px 0; }
 /****************************************/
 /*			LANDING PAGE HERO			*/
 /****************************************/
-section.landing-hero { height: 550px; }
+section.landing-hero { 
+	height: 550px; 
+	position: relative;
+}
 	
-	section.landing-hero figure {
-		width: 100%;
-		height: 100%;
+	section.landing-hero .carousel-hero { height: inherit; }
 
-		overflow: hidden;
+		section.landing-hero .carousel-hero figure {
+			width: 100%;
+			height: 100%;
+
+			overflow: hidden;
+			position: absolute;
+
+			z-index: 1;
+
+			top: 0;
+			left: 0;
+
+			overflow: hidden;
+
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	
+	section.landing-hero figure.pattern {
+		width: 50%;
+		height: inherit;
+		
+		padding: 0;
+		margin: 0;
+
+		display: block;
 		position: absolute;
 
 		top: 0;
-		left: 0;
-
-		overflow: hidden;
-
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		z-index: 1;
 	}
-
-		section.landing-hero figure span {
-			width: calc(60% + 100px);
+		section.landing-hero figure.pattern span {
+			width: 100%;
 			height: 100%;
 
 			position: absolute;
@@ -1320,8 +1340,8 @@ section.landing-hero { height: 550px; }
 			background-color: rgba(0,0,0,0.6);
 		}
 
-			section.landing-hero figure span.one {
-				left: -200px;
+			section.landing-hero figure.pattern span.one {
+				left: -105px;
 				-webkit-transform: skewX(21deg);
 				    -ms-transform: skewX(21deg);
 				        transform: skewX(21deg);
@@ -1337,64 +1357,90 @@ section.landing-hero { height: 550px; }
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1 );
 			}
 
-			section.landing-hero figure span.two {
+			section.landing-hero figure.pattern span.two {
 				left: -310px;
 				-webkit-transform: skewX(-21deg);
 				    -ms-transform: skewX(-21deg);
 				        transform: skewX(-21deg);
 			}
+	
+	section.landing-hero .carousel-hero-content {
+		width: 30%;
+		height: auto;
+		
+		top: 50%;
+		left: 10%;
 
-	section.landing-hero .hero_content {
-		height: 550px;
-		position: relative;
+		display: block;
+		position: absolute;
+
+		z-index: 2;
+
+		-webkit-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		        transform: translateY(-50%);
 	}
 
-		section.landing-hero .hero_content span {
+	section.landing-hero .carousel-hero-content .swiper-slide { opacity: 0 !important; }
+	section.landing-hero .carousel-hero-content .swiper-slide-active { opacity: 1 !important; }
+
+		section.landing-hero .carousel-hero-content .hero_content {
 			width: 100%;
+			height: auto;
+			position: relative;
 
-			display: block;
-
-			padding: 0;
-			margin: 0;
-
-			text-transform: uppercase;
-			text-align: left;
-
-			color: #fff;
-
-			font-family: 'Open Sans', sans-serif;
-			font-size: 11px;
-			font-weight: 600;
-
-			line-height: 11px;
-			letter-spacing: 1.5px;
+			-webkit-transition: all 0.3s ease-in-out;
+			   -moz-transition: all 0.3s ease-in-out;
+			     -o-transition: all 0.3s ease-in-out;
+			        transition: all 0.3s ease-in-out;
 		}
+			section.landing-hero .carousel-hero-content .hero_content span {
+				width: 100%;
 
-		section.landing-hero .hero_content header {
-			width: 100%;
+				display: block;
 
-			display: block;
+				padding: 0;
+				margin: 0;
 
-			padding: 0;
-			margin: 30px 0 0 0;
+				text-transform: uppercase;
+				text-align: left;
 
-			text-transform: uppercase;
-			text-align: left;
+				color: #fff;
 
-			color: #fff;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 11px;
+				font-weight: 600;
 
-			font-family: 'Oswald', sans-serif;
-			font-size: 34px;
-			font-weight: normal;
+				line-height: 11px;
+				letter-spacing: 1.5px;
+			}
 
-			line-height: 44px;
-			letter-spacing: 2px;
-		}
+			section.landing-hero .carousel-hero-content .hero_content header {
+				width: 100%;
 
-	/*section.landing-hero .swiper-pagination {
+				display: block;
+
+				padding: 0;
+				margin: 30px 0 0 0;
+
+				text-transform: uppercase;
+				text-align: left;
+
+				color: #fff;
+
+				font-family: 'Oswald', sans-serif;
+				font-size: 34px;
+				font-weight: normal;
+
+				line-height: 44px;
+				letter-spacing: 2px;
+			}
+
+	section.landing-hero .swiper-pagination {
 		position: relative;
 		text-align: left;
-	}*/
+		bottom: 0px;
+	}
 
 
 

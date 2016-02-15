@@ -14,9 +14,20 @@ $( document ).ready(function() {
 		$(".navbar-resp").toggleClass("open")
 	});
 
-	var carousel_hero = new Swiper (".carousel-hero", {
-	    pagination: '.swiper-pagination',
+	var carousel_hero_content = new Swiper (".carousel-hero-content", {
+		effect: "fade",
+		simulateTouch: false,
+		observer: true,
+		observeParents: true,
+		
+		pagination: '.swiper-pagination',
 		paginationClickable: true,
+	});
+
+	var carousel_hero_bg = new Swiper (".carousel-hero", {
+	    onSlideChangeStart: function(){ 
+	    	carousel_hero_content.slideTo(carousel_hero_bg.activeIndex, 400);
+	    }
 	});
 
 	var carousel_trending = new Swiper (".carousel-trending", {
