@@ -1,38 +1,110 @@
 /********************************************/
 /*			TEMPLATE SINGLE ARTICLE			*/
 /********************************************/
+aside.article-share {
+	width: 75px; 
+
+	position: fixed;
+	top: 200px;
+
+	z-index: 1;
+	
+	background-color: #f2f2f2;
+
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+	     -o-transition: all 0.2s ease-in-out;
+	        transition: all 0.2s ease-in-out;
+}
+
+aside.article-share.top { top: calc(50% - 106.5px); }
+aside.article-share.left { left: -75px; }
+
+
+	aside.article-share p {
+		width: 100%;
+
+		display: block;
+
+		padding: 0 20px;
+		margin: 20px 0 10px 0;
+
+		text-transform: uppercase;
+		text-align: center;
+		color: #000;
+		
+		font-family: 'Oswald', sans-serif;
+		font-size: 10px;
+		font-weight: bold;
+		
+		line-height: 14px;
+		letter-spacing: 1.5px;
+	}
+
+	aside.article-share ul {
+		width: 100%;
+
+		padding: 0;
+		margin: 0;
+
+		display: block;
+		position: relative;
+	}
+
+		aside.article-share ul li {
+			width: 40px;
+			height: 40px;
+	
+			padding: 0;
+			margin: 0 auto 10px auto;
+			
+			display: block;
+			position: relative;
+
+			background-size: 15px;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+			aside.article-share ul li:last-child { margin: 0 auto 15px auto; }
+
+			aside.article-share ul li.facebook { 
+				background-color: #3b5998;
+				background-image: url('../images/icon-share-facebook.png'); 
+			}
+			aside.article-share ul li.twitter { 
+				background-color: #44ccff;
+				background-image: url('../images/icon-share-twitter.png'); 
+			}
+			aside.article-share ul li.email { 
+				background-color: #dd3400;
+				background-image: url('../images/icon-share-email.png'); 
+			}
+
+			aside.article-share ul li a {
+				width: 100%;
+				height: 100%;
+
+				display: block;
+				position: relative;
+			}
+
+@media (min-width: 992px) {
+	aside.article-share {
+ 		left: calc(50% - 470px);
+	}
+}
+
+@media (min-width: 1200px) {
+	aside.article-share {
+ 		left: calc(50% - 570px);
+	}
+}
+
+
 section.single-article { padding-bottom: 90px; }
 		
 	section.single-article .relative { position: relative; }
-
-	/*section.single-article aside {
-		width: 75px; 
-		height: 100%;
-
-		background-color: #f2f2f2;
-	}
-
-		section.single-article aside p {
-			width: 100%;
-
-			display: block;
-
-			padding: 0 20px;
-			margin: 0;
-
-			text-transform: uppercase;
-			text-align: center;
-			color: #000;
-			
-			font-family: 'Oswald', sans-serif;
-			font-size: 10px;
-			font-weight: bold;
-			
-			line-height: normal;
-			letter-spacing: normal;
-		}*/
-
-
 
 	section.single-article:before {  
 		content: "";
