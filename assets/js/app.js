@@ -58,25 +58,23 @@ $( document ).ready(function() {
 
 	var descContentArt = new Swiper('.page-description-content-articles', {
 		initialSlide: 0,
-		slidesPerView: 'auto',
+		slidesPerView: "auto",
 		observer: true,
 		observeParents: true,
-		slideToClickedSlide: true,
 
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev',
 		pagination: '.swiper-pagination',
 
 		onInit: function(){
-			if ($(".swiper-slide").length == 1) {
-				$(".page-description-content-articles").addClass("one").removeClass("two");
-			} else if ($(".swiper-slide").length == 2) {
-				$(".page-description-content-articles").addClass("two").removeClass("one");
-			} else if ($(".swiper-slide").length >= 3) {
-				$(".page-description-content-articles").removeClass("one two");
-			};
+
+			var $specialSlider = $(".page-description-content-articles");
+			if ($specialSlider.find(".swiper-slide").length == 1) {
+				$specialSlider.addClass("one");
+			} else if ($specialSlider.find(".swiper-slide").length == 2) {
+				$specialSlider.addClass("two");
+			} 
 		}
 		
 	});
-	
 });

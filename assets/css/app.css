@@ -804,6 +804,8 @@ section.page-title { background-color: #000; }
 		
 		line-height: 60px;
 		letter-spacing: 0px;
+
+		cursor: pointer;
 	}
 
 		section.page-title .title p:after {
@@ -920,7 +922,7 @@ section.page-description-content {
 
 	section.page-description-content .one .swiper-slide { width: 100%; }
 	section.page-description-content .two .swiper-slide { width: calc(100%/2); }
-	section.page-description-content .swiper-slide { width: calc((100%/3) + 1px); }
+	section.page-description-content .swiper-slide { width: calc(100%/3); height: 238px; }
 
 		section.page-description-content article header {
 			width: 100%;
@@ -1002,8 +1004,15 @@ section.page-description-content {
 		background-repeat: no-repeat;
 	}
 
-	section.page-description-content .swiper-button-prev { background-image: url('../images/icon-carousel_arrow_left.png'); }
-	section.page-description-content .swiper-button-next { background-image: url('../images/icon-carousel_arrow_right.png'); }
+	section.page-description-content .swiper-button-prev { 
+		left: -284px;
+		background-image: url('../images/icon-carousel_arrow_left.png'); 
+	}
+	
+	section.page-description-content .swiper-button-next { 
+		right: -43px;
+		background-image: url('../images/icon-carousel_arrow_right.png'); 
+	}
 	
 	section.page-description-content .swiper-pagination .swiper-pagination-bullet { background-color: #8f8f8f; }
 	section.page-description-content .swiper-pagination .swiper-pagination-bullet-active { background-color: #ffffff; }
