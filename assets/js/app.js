@@ -1,4 +1,4 @@
-if ($("aside.article-share").length > 1) {
+if ($("aside.article-share").length > 0) {
 	$(window).scroll(function() { 
 		$("aside.article-share").toggleClass("top", $(window).scrollTop() > 140); 
 		var tagsPos = $(".tags").position();
@@ -27,7 +27,7 @@ $( document ).ready(function() {
 	var carousel_hero_bg = new Swiper (".carousel-hero", {
 		observer: true,
 		observeParents: true,
-		
+
 	    onSlideChangeStart: function(){ 
 	    	carousel_hero_content.slideTo(carousel_hero_bg.activeIndex, 400);
 	    }
