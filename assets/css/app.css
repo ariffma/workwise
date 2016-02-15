@@ -8,6 +8,7 @@ aside.article-share {
 	top: 200px;
 
 	z-index: 1;
+	opacity: 1;
 	
 	background-color: #f2f2f2;
 
@@ -18,7 +19,7 @@ aside.article-share {
 }
 
 aside.article-share.top { top: calc(50% - 106.5px); }
-aside.article-share.left { left: -75px; }
+aside.article-share.disappear { opacity: 0; }
 
 
 	aside.article-share p {

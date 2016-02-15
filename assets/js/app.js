@@ -2,7 +2,7 @@ if ($("aside.article-share").length > 0) {
 	$(window).scroll(function() { 
 		$("aside.article-share").toggleClass("top", $(window).scrollTop() > 140); 
 		var tagsPos = $(".tags").position();
-		$("aside.article-share").toggleClass("left", $(window).scrollTop() > tagsPos.top); 
+		$("aside.article-share").toggleClass("disappear", $(window).scrollTop() > tagsPos.top); 
 	});
 };
 
@@ -27,6 +27,8 @@ $( document ).ready(function() {
 	var carousel_hero_bg = new Swiper (".carousel-hero", {
 		observer: true,
 		observeParents: true,
+
+		autoplay: 3000,
 
 	    onSlideChangeStart: function(){ 
 	    	carousel_hero_content.slideTo(carousel_hero_bg.activeIndex, 400);
