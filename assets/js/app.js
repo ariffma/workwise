@@ -19,12 +19,15 @@ $( document ).ready(function() {
 		simulateTouch: false,
 		observer: true,
 		observeParents: true,
-		
+
 		pagination: '.swiper-pagination',
 		paginationClickable: true,
 	});
 
 	var carousel_hero_bg = new Swiper (".carousel-hero", {
+		observer: true,
+		observeParents: true,
+		
 	    onSlideChangeStart: function(){ 
 	    	carousel_hero_content.slideTo(carousel_hero_bg.activeIndex, 400);
 	    }

@@ -150,9 +150,7 @@
 	/****************************************/
 	/*			LANDING PAGE HERO			*/
 	/****************************************/
-	section.landing-hero { 
-		height: auto; 
-	}
+	section.landing-hero { height: auto; }
 
 		section.landing-hero .carousel-hero { 
 			height: 220px; 
@@ -177,48 +175,7 @@
 			        transform: translateY(0%);
 		}
 
-		section.landing-hero .swiper-pagination {
-			position: relative;
-			text-align: center;
-			margin-top: 40px;
-			bottom: 0px;
-		}
-
-
-		/*section.landing-hero figure {
-			height: 220px;
-			position: relative;
-		}
-
-			section.landing-hero figure span.one,
-			section.landing-hero figure span.two { display: none; }
-
-		section.landing-hero .container { width: 100%; }
-		section.landing-hero .hero_content {
-			height: auto;
-			padding: 40px 15px 80px 15px;
-			background-color: #000;
-		}
-
-			.hero_content .vCenter {
-				top: 0;
-				-webkit-transform: translateY(0);
-				    -ms-transform: translateY(0);
-				        transform: translateY(0);
-			}
-
-				section.landing-hero .hero_content span {
-					font-size: 11.5px;
-					padding: 0 10px;
-				}
-
-				section.landing-hero .hero_content header {
-					margin: 24px 0 0 0;
-					padding: 0 10px;
-
-					font-size: 25px;
-					line-height: 32px;
-				}*/
+		section.landing-hero .swiper-pagination { text-align: center; }
 
 
 
@@ -427,21 +384,10 @@
 		margin-left: -15px;
 	}
 
-	section.single-article .tags:before {
-		margin-bottom: 25px;
-	}
-
-	section.single-article .tags:after {
-		margin-top: 25px;
-	}
-
-	section.single-article .tags p span {
-		margin: 5px;
-	}
-
-	section.single-article h2 {
-		margin-top: 20px;
-	}
+	section.single-article .tags:before { margin-bottom: 25px; }
+	section.single-article .tags:after { margin-top: 25px; }
+	section.single-article .tags p span { margin: 5px; }
+	section.single-article h2 { margin-top: 20px; }
 
 
 
@@ -461,9 +407,7 @@
 		margin-top: 3px;
 	}
 
-	section.page-description-content .swiper-slide { 
-		width: 100%;
-	}
+	section.page-description-content .swiper-slide { width: 100%; }
 
 
 
@@ -491,8 +435,6 @@
 
 
 @media (max-width: 1200px) { 
-	section.trending article.one header {
-		height: calc(343px - 72px);
-	}
+	section.trending article.one header { height: calc(343px - 72px); }
 }
 

@@ -1439,6 +1439,7 @@ section.landing-hero {
 	section.landing-hero .swiper-pagination {
 		position: relative;
 		text-align: left;
+		margin-top: 20px;
 		bottom: 0px;
 	}
 
