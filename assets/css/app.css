@@ -1012,7 +1012,7 @@ section.page-description-content.show {
 
 	section.page-description-content .one .swiper-slide { width: 100%; }
 	section.page-description-content .two .swiper-slide { width: calc(100%/2); }
-	section.page-description-content .swiper-slide { width: calc(100%/3); height: 238px; }
+	section.page-description-content .swiper-slide { width: calc((100%/3) + 1px); height: 238px; }
 
 		section.page-description-content article header {
 			width: 100%;
