@@ -940,10 +940,28 @@ section.page-title { background-color: #000; }
 /*			TEMPLATE PAGE DESCRIPTION CONTENT			*/
 /********************************************************/
 section.page-description-content { 
-	display: none;
+	width: 100%;
+	height: 0px;
+	
+	padding: 0;
+	margin: 0;
+	
+	display: block;
 	position: absolute;
+	
 	z-index: 1;
+	overflow: hidden;
+	
 	background-color: #000;
+
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+	     -o-transition: all 0.2s ease-in-out;
+	        transition: all 0.2s ease-in-out;
+}
+
+section.page-description-content.show {
+	height: 238px;
 }
 
 	section.page-description-content .title {
@@ -1077,7 +1095,6 @@ section.page-description-content {
 	}
 
 	section.page-description-content .swiper-button-prev { 
-		left: -284px;
 		background-image: url('../images/icon-carousel_arrow_left.png'); 
 	}
 	
@@ -1088,6 +1105,14 @@ section.page-description-content {
 	
 	section.page-description-content .swiper-pagination .swiper-pagination-bullet { background-color: #8f8f8f; }
 	section.page-description-content .swiper-pagination .swiper-pagination-bullet-active { background-color: #ffffff; }
+
+@media (min-width: 992px) {
+	section.page-description-content .swiper-button-prev { left: -284px; }
+}
+
+@media (min-width: 1200px) {
+	section.page-description-content .swiper-button-prev { left: -334px; }
+}
 
 
 

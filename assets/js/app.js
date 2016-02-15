@@ -1,8 +1,10 @@
-$(window).scroll(function() { 
-	$("aside.article-share").toggleClass("top", $(window).scrollTop() > 140); 
-	var tagsPos = $(".tags").position();
-	$("aside.article-share").toggleClass("left", $(window).scrollTop() > tagsPos.top); 
-});
+if ($("aside.article-share").length > 1) {
+	$(window).scroll(function() { 
+		$("aside.article-share").toggleClass("top", $(window).scrollTop() > 140); 
+		var tagsPos = $(".tags").position();
+		$("aside.article-share").toggleClass("left", $(window).scrollTop() > tagsPos.top); 
+	});
+};
 
 $( document ).ready(function() { 
 
@@ -64,7 +66,7 @@ $( document ).ready(function() {
 
 
 	$(".learnmore").click(function() { 
-		$(".page-description-content").slideToggle(300);
+		$(".page-description-content").toggleClass("show");
 	});
 
 	var descContentArt = new Swiper('.page-description-content-articles', {
@@ -84,7 +86,8 @@ $( document ).ready(function() {
 			} else if ($specialSlider.find(".swiper-slide").length == 2) {
 				$specialSlider.addClass("two");
 			}
-		}
-		
+		},
 	});
+
+
 });
