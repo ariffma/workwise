@@ -33,6 +33,14 @@
 				text-align: left;
 			}
 
+		nav ul li.active:after {
+			left: -22px;
+			bottom: calc(50% - 4px);
+			-webkit-transform: rotate(90deg);
+			    -ms-transform: rotate(90deg);
+			        transform: rotate(90deg);
+		}
+
 	nav ul.icon {
 		margin: 0 0 30px 0;
 		height: auto;
@@ -366,7 +374,9 @@
 
 	section.single-article .share ul li:nth-child(2) { margin: 0 10px; }
 	section.single-article .share ul li p a { padding: 10px; }
-
+	section.single-article header { 
+		margin-bottom: 15px;
+	}
 	section.single-article figure,
 	section.single-article figure.left,
 	section.single-article figure.right {
@@ -376,6 +386,10 @@
 		float: none;
 		
 		margin: 0;
+	}
+
+	section.single-article figure figcaption { 
+		margin-bottom: 15px; 
 	}
 
 	section.single-article .tags:before, 

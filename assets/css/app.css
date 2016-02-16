@@ -91,15 +91,11 @@ aside.article-share.disappear { opacity: 0; }
 			}
 
 @media (min-width: 992px) {
-	aside.article-share {
- 		left: calc(50% - 470px);
-	}
+	aside.article-share { left: calc(50% - 470px); }
 }
 
 @media (min-width: 1200px) {
-	aside.article-share {
- 		left: calc(50% - 570px);
-	}
+	aside.article-share { left: calc(50% - 570px); }
 }
 
 
@@ -242,7 +238,7 @@ section.single-article { padding-bottom: 90px; }
 				width: 100%;
 				display: block;
 
-				padding: 0;
+				padding: 0 15px;
 				margin: 0;
 				
 				text-align: center;

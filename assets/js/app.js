@@ -22,13 +22,17 @@ $( document ).ready(function() {
 
 		pagination: '.carousel-hero-content .swiper-pagination',
 		paginationClickable: true,
+
+		onSlideChangeStart: function(){ 
+	    	carousel_hero_bg.slideTo(carousel_hero_content.activeIndex, 400);
+	    }
 	});
 
 	var carousel_hero_bg = new Swiper (".carousel-hero", {
 		observer: true,
 		observeParents: true,
 
-		// autoplay: 3000,
+		autoplay: 3000,
 
 	    onSlideChangeStart: function(){ 
 	    	carousel_hero_content.slideTo(carousel_hero_bg.activeIndex, 400);
@@ -47,8 +51,10 @@ $( document ).ready(function() {
 	var galleryContent = new Swiper('.gallery-content', {
 		observer: true,
 		observeParents: true,
-		simulateTouch: false,   
 		initialSlide: 0,
+		onSlideChangeStart: function(){ 
+			galleryBig.slideTo(galleryContent.activeIndex, 400);
+	    }
 	});
 
 	var galleryBig = new Swiper('.gallery-big', {
