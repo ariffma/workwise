@@ -59,6 +59,7 @@ header.navigation {
 	position: relative;
 
 	z-index: 3;
+	overflow: hidden;
 	background-color: #fff;
 }
 	
