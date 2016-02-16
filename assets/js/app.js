@@ -20,7 +20,7 @@ $( document ).ready(function() {
 		observer: true,
 		observeParents: true,
 
-		pagination: '.swiper-pagination',
+		pagination: '.carousel-hero-content .swiper-pagination',
 		paginationClickable: true,
 	});
 
@@ -28,7 +28,7 @@ $( document ).ready(function() {
 		observer: true,
 		observeParents: true,
 
-		autoplay: 3000,
+		// autoplay: 3000,
 
 	    onSlideChangeStart: function(){ 
 	    	carousel_hero_content.slideTo(carousel_hero_bg.activeIndex, 400);
@@ -36,7 +36,7 @@ $( document ).ready(function() {
 	});
 
 	var carousel_trending = new Swiper (".carousel-trending", {
-	    pagination: '.swiper-pagination',
+	    pagination: '.carousel-trending .swiper-pagination',
 		paginationClickable: true,
 	});
 
@@ -61,7 +61,7 @@ $( document ).ready(function() {
 			galleryContent.slideTo(galleryBig.activeIndex, 400);
 		},
 
-		pagination: '.swiper-pagination',
+		pagination: '.gallery-big .swiper-pagination',
 	});
 
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
@@ -73,8 +73,8 @@ $( document ).ready(function() {
 			galleryBig.slideTo(galleryThumbs.activeIndex, 400);
 		},
 
-		nextButton: '.swiper-button-next',
-		prevButton: '.swiper-button-prev',
+		nextButton: '.gallery-thumbs .swiper-button-next',
+		prevButton: '.gallery-thumbs .swiper-button-prev',
 	});
 
 
@@ -91,9 +91,9 @@ $( document ).ready(function() {
 		observer: true,
 		observeParents: true,
 
-		nextButton: '.swiper-button-next',
-		prevButton: '.swiper-button-prev',
-		pagination: '.swiper-pagination',
+		nextButton: '.swiper-parentContainer .swiper-button-next',
+		prevButton: '.swiper-parentContainer .swiper-button-prev',
+		pagination: '.swiper-parentContainer .swiper-pagination',
 
 		onInit: function(){
 			var $specialSlider = $(".page-description-content-articles");
