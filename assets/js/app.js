@@ -79,8 +79,19 @@ $( document ).ready(function() {
 			galleryBig.slideTo(galleryThumbs.activeIndex, 400);
 		},
 
-		nextButton: '.gallery-thumbs .swiper-button-next',
-		prevButton: '.gallery-thumbs .swiper-button-prev',
+		onInit: function(){
+			var $galleryThumbsDiv = $(".gallery-thumbs");
+			if ($galleryThumbsDiv.find(".swiper-slide").length == 2) {
+				$galleryThumbsDiv.addClass("two");
+			} else if ($galleryThumbsDiv.find(".swiper-slide").length == 3) {
+				$galleryThumbsDiv.addClass("three");
+			} else if ($galleryThumbsDiv.find(".swiper-slide").length == 4) {
+				$galleryThumbsDiv.addClass("four");
+			}
+		},
+
+		nextButton: '.swiper-parent .swiper-button-next',
+		prevButton: '.swiper-parent .swiper-button-prev',
 	});
 
 
